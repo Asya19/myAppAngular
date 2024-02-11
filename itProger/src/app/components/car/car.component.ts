@@ -18,7 +18,7 @@ export class CarComponent implements OnInit {
 
   options:string[];
 
-
+  isEdit:boolean = false;
 
   constructor() { }
 
@@ -32,6 +32,10 @@ export class CarComponent implements OnInit {
       wheels: 'Зелёные'
     };
     this.options = ['ABS', 'Автопилот', 'Авто Паркинг']
+  }
+
+  edit() {
+  this.isEdit = !this.isEdit;
   }
 
   carSelect(carName:string) {
