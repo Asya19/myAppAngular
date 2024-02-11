@@ -68,7 +68,24 @@ export class CarComponent implements OnInit {
     this.options = ['ABS', 'Автопилот', 'Авто Паркинг']
     }
   }
+
+  addOpt(opt:string) {
+    this.options.unshift(opt);
+    return false;
+  }
+
+  deleteOpt(opt:string) {
+  for (let i = 0; i < this.options.length; i++) {
+    if (this.options[i] == opt) {
+      this.options.splice(i, 1);
+      break;
+    }
+
+  }
+  }
+
 }
+
 interface Colors {
   car:string;
   salon:string;
